@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    height: 940px;
+    width:100%;
+    background-color: #c7edff;   
+}
+.img {
+    margin: auto;
+    height:400px ;
+    width: 500px;
+    background-image: url(../img/basiccity.jpg);
+    background-size: 100% 100%;
+    position: relative;
+    /* border-top-left-radius:50%;
+    border-top-right-radius:50% ; */
+    
+   
+}
+.cloud {
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    animation-name: cloud; 
+    animation-duration: 15s ; 
+    animation-timing-function: cubic-bezier(.09,.29,.74,.51);
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    
+}
+.second{
+    position: absolute;
+    top: 25px;
+    height: 70px;
+    
+    animation: seconCloud 25s cubic-bezier(.09,.29,.74,.51) infinite alternate;
+}
+.third {
+    height: 40px;
+    position: absolute;
+    right:0;
+    animation: thirdCloud 25s cubic-bezier(.27,.88,.82,.49) infinite alternate;
+    animation-delay: 25s;
+   
+}
+@keyframes cloud {
+    0% {
+        left:0;
+    }
+    100% {
+        left: 390px;
+    }
+} 
+@keyframes seconCloud {
+    from {
+        left:0;
+    }
+    to {
+        left:400px;
+    }
+}
+@keyframes thirdCloud {
+    from {
+        right:0;
+    }
+    to {
+        right: 400px;
+    }
+}
+.blueCar , .brownCar , .rcfirst , .rcsecond{
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    
+}
+.blueCar {
+    bottom: 5px;
+    right: 0;
+    height: 60px !important;
+    animation: blueCar 5s cubic-bezier(0,.05,.95,.92) infinite;
+}
+.brownCar {
+    left: 0;
+    bottom: 35px;
+    animation: brownCar 5s cubic-bezier(0,.05,.95,.92) infinite;
+}
+
+@keyframes blueCar {
+    /*sagdan başlayaraq 0-dan - 400 px ireli */
+    form {
+        right:0;
+    }
+    to {
+        right: 400px;
+    }
+}
+@keyframes brownCar {
+    from {
+        
+        left:0;
+    }
+    to {
+        
+        left:400px;
+    }
+}
+.rcfirst{
+    bottom:35px;
+    left: 0;
+    animation: brownCar 5s cubic-bezier(0,.05,.95,.92) 3s infinite;
+}
+.rcsecond{
+    bottom: 4px;
+    right:0;  
+    animation: blueCar 3s cubic-bezier(0,.05,.95,.92) 3s infinite;
+}
+
+
